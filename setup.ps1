@@ -96,3 +96,52 @@ Write-host "********************************************************************
 chocolatey feature disable -n=allowGlobalConfirmation
 
 Write-host "Choco Packages Ended At: $((Get-Date).ToString())"
+
+Write-host "********************************************************************************"
+Write-host "Configure PowerShell..."
+# Give PowerShell admin rights
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force -Scope CurrentUser
+
+Write-host "********************************************************************************"
+Write-host "Personalise Windows UI..."
+
+# set keyboard layout
+Set-WinUserLanguageList en-AU -Force
+
+# set the date format, number format, etc.
+Set-Culture en-AU
+
+# set the timezone
+# use Get-TimeZone -ListAvailable to list the available timezone ids.
+Set-TimeZone -Id 'AUS Eastern Standard Time'
+
+# show hidden files
+Set-ItemProperty -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name Hidden -Value 1
+
+# show file extensions
+Set-ItemProperty -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name HideFileExt -Value 0
+
+# hide the search button
+Set-ItemProperty -Path HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Search -Name SearchboxTaskbarMode -Value 0
+
+# set default Explorer location to This PC
+Set-ItemProperty -Path HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name LaunchTo -Value 1
+
+# Show all folders in nagivation pane
+Set-ItemProperty -Path HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneShowAllFolders -Value 1
+
+# Navigation pane should automatically expand to the current folder
+Set-ItemProperty -Path HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneExpandToCurrentFolder -Value 1
+
+# Always show menus in Windows Explorer
+Set-ItemProperty -Path HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name AlwaysShowMenus -Value 1
+
+# Show all items in the system tray
+New-ItemProperty -Path HKLM:Software\Microsoft\Windows\CurrentVersion\Explorer -Name EnableAutoTray -Value 0 -PropertyType DWORD
+
+# display full path in the title bar
+New-Item -Path HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState -Force `
+    | New-ItemProperty -Name FullPath -Value 1 -PropertyType DWORD `
+    | Out-Null
+
+Write-host "********************************************************************************"
