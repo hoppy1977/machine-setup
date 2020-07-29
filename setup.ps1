@@ -97,6 +97,10 @@ write-host "Install TreeSize Free..."
 cinst -y --no-progress treesizefree
 
 Write-host "********************************************************************************"
+write-host "Install Beyond Compare..."
+cinst -y --no-progress beyondcompare
+
+Write-host "********************************************************************************"
 chocolatey feature disable -n=allowGlobalConfirmation
 
 Write-host "Choco Packages Ended At: $((Get-Date).ToString())"
