@@ -42,7 +42,7 @@ cinst -y --no-progress notepadplusplus
 
 Write-host "********************************************************************************"
 write-host "Install Postman..."
-cinst -y --no-progress  postman
+cinst -y --no-progress postman
 
 Write-host "********************************************************************************"
 write-host "Install TortoiseGit..."
@@ -80,9 +80,9 @@ Write-host "********************************************************************
 write-host "Install Vagrant..."
 cinst -y --no-progress vagrant
 
-Write-host "********************************************************************************"
-write-host "Install VirtualBox..."
-cinst -y --no-progress virtualbox
+#Write-host "********************************************************************************"
+#write-host "Install VirtualBox..."
+#cinst -y --no-progress virtualbox
 
 Write-host "********************************************************************************"
 write-host "Install Anaconda3..."
@@ -99,6 +99,38 @@ cinst -y --no-progress treesizefree
 Write-host "********************************************************************************"
 write-host "Install Beyond Compare..."
 cinst -y --no-progress beyondcompare
+
+Write-host "********************************************************************************"
+write-host "Install OBS Studio..."
+cinst -y --no-progress obs-studio
+
+Write-host "********************************************************************************"
+write-host "Install AWS CLI..."
+cinst -y --no-progress awscli
+
+Write-host "********************************************************************************"
+write-host "Install Azure CLI..."
+cinst -y --no-progress azure-cli
+
+Write-host "********************************************************************************"
+write-host "Install Terraform..."
+cinst -y --no-progress Terraform
+
+Write-host "********************************************************************************"
+write-host "Install utorrent..."
+cinst -y --no-progress utorrent
+
+Write-host "********************************************************************************"
+write-host "Install putty..."
+cinst -y --no-progress putty
+
+Write-host "********************************************************************************"
+write-host "Install nordvpm..."
+cinst -y --no-progress nordvpn
+
+Write-host "********************************************************************************"
+write-host "Install git..."
+cinst -y --no-progress git
 
 Write-host "********************************************************************************"
 chocolatey feature disable -n=allowGlobalConfirmation
