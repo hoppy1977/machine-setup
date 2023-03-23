@@ -129,6 +129,10 @@ write-host "Install nordvpm..."
 cinst -y --no-progress nordvpn
 
 Write-host "********************************************************************************"
+write-host "Install PowerToys..."
+cinst -y --no-progress powertoys
+
+Write-host "********************************************************************************"
 write-host "Install git..."
 cinst -y --no-progress git
 
