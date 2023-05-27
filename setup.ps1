@@ -28,9 +28,9 @@ Write-host "********************************************************************
 write-host "Install Chrome..."
 cinst -y --no-progress GoogleChrome
 
-Write-host "********************************************************************************"
-write-host "Install SetDefaultBrowser..."
-cinst -y --no-progress setdefaultbrowser
+#Write-host "********************************************************************************"
+#write-host "Install SetDefaultBrowser..."
+#cinst -y --no-progress setdefaultbrowser
 
 Write-host "********************************************************************************"
 write-host "Install NVM..."
@@ -56,9 +56,9 @@ Write-host "********************************************************************
 write-host "Install Paint.NET..."
 cinst -y --no-progress paint.net
 
-Write-host "********************************************************************************"
-write-host "Install CopyQ..."
-cinst -y --no-progress copyq
+#Write-host "********************************************************************************"
+#write-host "Install CopyQ..."
+#cinst -y --no-progress copyq
 
 Write-host "********************************************************************************"
 write-host "Install KeePass..."
@@ -72,13 +72,13 @@ Write-host "********************************************************************
 write-host "Install ExifTool..."
 cinst -y --no-progress exiftool
 
-Write-host "********************************************************************************"
-write-host "Install LockHunter..."
-cinst -y --no-progress lockhunter
+#Write-host "********************************************************************************"
+#write-host "Install LockHunter..."
+#cinst -y --no-progress lockhunter
 
-Write-host "********************************************************************************"
-write-host "Install Vagrant..."
-cinst -y --no-progress vagrant
+#Write-host "********************************************************************************"
+#write-host "Install Vagrant..."
+#cinst -y --no-progress vagrant
 
 #Write-host "********************************************************************************"
 #write-host "Install VirtualBox..."
@@ -125,7 +125,7 @@ write-host "Install putty..."
 cinst -y --no-progress putty
 
 Write-host "********************************************************************************"
-write-host "Install nordvpm..."
+write-host "Install nordvpn..."
 cinst -y --no-progress nordvpn
 
 Write-host "********************************************************************************"
@@ -135,6 +135,19 @@ cinst -y --no-progress powertoys
 Write-host "********************************************************************************"
 write-host "Install git..."
 cinst -y --no-progress git
+
+Write-host "********************************************************************************"
+write-host "Install dropbox..."
+cinst -y --no-progress dropbox
+
+Write-host "********************************************************************************"
+write-host "Install steam-client..."
+cinst -y --no-progress steam-client
+
+Write-host "********************************************************************************"
+write-host "Install vscode..."
+cinst -y --no-progress vscode
+
 
 Write-host "********************************************************************************"
 chocolatey feature disable -n=allowGlobalConfirmation
