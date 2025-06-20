@@ -2,7 +2,7 @@ Write-host "********************************************************************
 Write-host "Choco Packages Started At: $((Get-Date).ToString())"
 
 Write-host "********************************************************************************"
-chocolatey feature enable -n=allowGlobalConfirmation
+choco feature enable -n=allowGlobalConfirmation
 
 Write-host "********************************************************************************"
 $ChocoInstallPath = "$($env:SystemDrive)\ProgramData\Chocolatey\bin"
@@ -18,146 +18,146 @@ if (!(Test-Path $ChocoInstallPath)) {
 
 Write-host "********************************************************************************"
 write-host "Install Cmder..."
-cinst -y --no-progress  cmder
+choco install -y --no-progress  cmder
 
 Write-host "********************************************************************************"
 write-host "Install 7-Zip..."
-cinst -y --no-progress 7zip
+choco install -y --no-progress 7zip
 
-Write-host "********************************************************************************"
-write-host "Install Chrome..."
-cinst -y --no-progress GoogleChrome
+#Write-host "********************************************************************************"
+#write-host "Install Chrome..."
+#choco install -y --no-progress GoogleChrome
 
 #Write-host "********************************************************************************"
 #write-host "Install SetDefaultBrowser..."
-#cinst -y --no-progress setdefaultbrowser
+#choco install -y --no-progress setdefaultbrowser
 
-Write-host "********************************************************************************"
-write-host "Install NVM..."
-cinst -y --no-progress nvm
+#Write-host "********************************************************************************"
+#write-host "Install NVM..."
+#choco install -y --no-progress nvm
 
 Write-host "********************************************************************************"
 write-host "Install Notepad++..."
-cinst -y --no-progress notepadplusplus
+choco install -y --no-progress notepadplusplus
 
 Write-host "********************************************************************************"
 write-host "Install Postman..."
-cinst -y --no-progress postman
+choco install -y --no-progress postman
 
 Write-host "********************************************************************************"
 write-host "Install TortoiseGit..."
-cinst -y --no-progress tortoisegit
+choco install -y --no-progress tortoisegit
 
 Write-host "********************************************************************************"
 write-host "Install GrepWin..."
-cinst -y --no-progress grepwin
+choco install -y --no-progress grepwin
 
 Write-host "********************************************************************************"
 write-host "Install Paint.NET..."
-cinst -y --no-progress paint.net
+choco install -y --no-progress paint.net
 
 #Write-host "********************************************************************************"
 #write-host "Install CopyQ..."
-#cinst -y --no-progress copyq
+#choco install -y --no-progress copyq
 
 Write-host "********************************************************************************"
 write-host "Install KeePass..."
-cinst -y --no-progress keepass
+choco install -y --no-progress keepass
 
 Write-host "********************************************************************************"
 write-host "Install VLC..."
-cinst -y --no-progress vlc
+choco install -y --no-progress vlc
 
-Write-host "********************************************************************************"
-write-host "Install ExifTool..."
-cinst -y --no-progress exiftool
+#Write-host "********************************************************************************"
+#write-host "Install ExifTool..."
+#choco install -y --no-progress exiftool
 
 #Write-host "********************************************************************************"
 #write-host "Install LockHunter..."
-#cinst -y --no-progress lockhunter
+#choco install -y --no-progress lockhunter
 
 #Write-host "********************************************************************************"
 #write-host "Install Vagrant..."
-#cinst -y --no-progress vagrant
+#choco install -y --no-progress vagrant
 
 #Write-host "********************************************************************************"
 #write-host "Install VirtualBox..."
-#cinst -y --no-progress virtualbox
+#choco install -y --no-progress virtualbox
 
 Write-host "********************************************************************************"
 write-host "Install Anaconda3..."
-cinst -y --no-progress anaconda3
+choco install -y --no-progress anaconda3
 
-Write-host "********************************************************************************"
-write-host "Install Adobe Reader..."
-cinst -y --no-progress adobereader
+#Write-host "********************************************************************************"
+#write-host "Install Adobe Reader..."
+#choco install -y --no-progress adobereader
 
 Write-host "********************************************************************************"
 write-host "Install TreeSize Free..."
-cinst -y --no-progress treesizefree
+choco install -y --no-progress treesizefree
 
 Write-host "********************************************************************************"
 write-host "Install Beyond Compare..."
-cinst -y --no-progress beyondcompare
+choco install -y --no-progress beyondcompare
 
 Write-host "********************************************************************************"
 write-host "Install OBS Studio..."
-cinst -y --no-progress obs-studio
+choco install -y --no-progress obs-studio
 
 Write-host "********************************************************************************"
 write-host "Install AWS CLI..."
-cinst -y --no-progress awscli
+choco install -y --no-progress awscli
 
-Write-host "********************************************************************************"
-write-host "Install Azure CLI..."
-cinst -y --no-progress azure-cli
+#Write-host "********************************************************************************"
+#write-host "Install Azure CLI..."
+#choco install -y --no-progress azure-cli
 
-Write-host "********************************************************************************"
-write-host "Install Terraform..."
-cinst -y --no-progress Terraform
+#Write-host "********************************************************************************"
+#write-host "Install Terraform..."
+#choco install -y --no-progress Terraform
 
-Write-host "********************************************************************************"
-write-host "Install utorrent..."
-cinst -y --no-progress utorrent
+#Write-host "********************************************************************************"
+#write-host "Install utorrent..."
+#choco install -y --no-progress utorrent
 
-Write-host "********************************************************************************"
-write-host "Install putty..."
-cinst -y --no-progress putty
+#Write-host "********************************************************************************"
+#write-host "Install putty..."
+#choco install -y --no-progress putty
 
-Write-host "********************************************************************************"
-write-host "Install nordvpn..."
-cinst -y --no-progress nordvpn
+#Write-host "********************************************************************************"
+#write-host "Install nordvpn..."
+#choco install -y --no-progress nordvpn
 
 Write-host "********************************************************************************"
 write-host "Install PowerToys..."
-cinst -y --no-progress powertoys
+choco install -y --no-progress powertoys
 
-Write-host "********************************************************************************"
-write-host "Install git..."
-cinst -y --no-progress git
+#Write-host "********************************************************************************"
+#write-host "Install git..."
+#choco install -y --no-progress git
 
 Write-host "********************************************************************************"
 write-host "Install dropbox..."
-cinst -y --no-progress dropbox
+choco install -y --no-progress dropbox
 
 Write-host "********************************************************************************"
 write-host "Install steam-client..."
-cinst -y --no-progress steam-client
+choco install -y --no-progress steam-client
+
+#Write-host "********************************************************************************"
+#write-host "Install vscode..."
+#choco install -y --no-progress vscode
+
 
 Write-host "********************************************************************************"
-write-host "Install vscode..."
-cinst -y --no-progress vscode
-
-
-Write-host "********************************************************************************"
-chocolatey feature disable -n=allowGlobalConfirmation
+choco feature disable -n=allowGlobalConfirmation
 
 Write-host "Choco Packages Ended At: $((Get-Date).ToString())"
 
 Write-host "********************************************************************************"
 Write-host "Configure PowerShell..."
 # Give PowerShell admin rights
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force -Scope CurrentUser
+#Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force -Scope CurrentUser
 
 Write-host "********************************************************************************"
 Write-host "Personalise Windows UI..."
